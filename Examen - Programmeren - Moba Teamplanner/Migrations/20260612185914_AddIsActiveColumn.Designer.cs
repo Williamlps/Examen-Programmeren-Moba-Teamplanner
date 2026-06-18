@@ -4,6 +4,7 @@ using Examen___Programmeren___Moba_Teamplanner.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Examen___Programmeren___Moba_Teamplanner.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260612185914_AddIsActiveColumn")]
+    partial class AddIsActiveColumn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -24,11 +27,11 @@ namespace Examen___Programmeren___Moba_Teamplanner.Migrations
 
             modelBuilder.Entity("Examen___Programmeren___Moba_Teamplanner.Models.Champ", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
                     b.Property<int>("Difficulty")
                         .HasColumnType("int");
@@ -39,14 +42,14 @@ namespace Examen___Programmeren___Moba_Teamplanner.Migrations
                     b.Property<int>("MainRole")
                         .HasColumnType("int");
 
-                    b.Property<string>("Name")
+                    b.Property<int>("Types")
+                        .HasColumnType("int");
+
+                    b.Property<string>("name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Type")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
                     b.ToTable("Champions");
                 });
@@ -140,7 +143,7 @@ namespace Examen___Programmeren___Moba_Teamplanner.Migrations
                     b.Property<int>("Rank")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SecondaryRole")
+                    b.Property<int>("SecondaryRole")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

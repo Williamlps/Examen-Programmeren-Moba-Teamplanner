@@ -14,8 +14,8 @@ namespace Examen___Programmeren___Moba_Teamplanner.Models
         public string? Name { get; set; }
         public Role BestRole { get; set; }
         public Role? SecondaryRole { get; set; }
-        public string Rank { get; set; } = "Unranked";
-        public bool Online { get; set; } = true;
+        public Rank Rank { get; set; } = Rank.Unranked;
+        public bool IsActive { get; set; } = true;
         public string? Description { get; set; }
 
         public List<PlayerTeam> PlayersTeam { get; set; } = new();
