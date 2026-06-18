@@ -1,4 +1,4 @@
-﻿namespace Examen___Programmeren___Moba_Teamplanner.Forms
+namespace Examen___Programmeren___Moba_Teamplanner.Forms
 {
     partial class PlayerForms
     {
@@ -51,7 +51,7 @@
             btnAdd = new Button();
             btnSave = new Button();
             btnDelete = new Button();
-            btnClear = new Button();
+            btnNew = new Button();
             btnSortRank = new Button();
             label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvPlayers).BeginInit();
@@ -241,7 +241,7 @@
             // btnAdd
             // 
             btnAdd.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAdd.Location = new Point(1046, 240);
+            btnAdd.Location = new Point(1050, 240);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(100, 80);
             btnAdd.TabIndex = 23;
@@ -252,7 +252,7 @@
             // btnSave
             // 
             btnSave.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSave.Location = new Point(1046, 360);
+            btnSave.Location = new Point(1050, 360);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(100, 80);
             btnSave.TabIndex = 24;
@@ -263,7 +263,7 @@
             // btnDelete
             // 
             btnDelete.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnDelete.Location = new Point(1046, 487);
+            btnDelete.Location = new Point(1050, 487);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(100, 80);
             btnDelete.TabIndex = 25;
@@ -271,16 +271,16 @@
             btnDelete.UseVisualStyleBackColor = true;
             btnDelete.Click += btnDelete_Click;
             // 
-            // btnClear
+            // btnNew
             // 
-            btnClear.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnClear.Location = new Point(1046, 604);
-            btnClear.Name = "btnClear";
-            btnClear.Size = new Size(100, 80);
-            btnClear.TabIndex = 26;
-            btnClear.Text = "Clear";
-            btnClear.UseVisualStyleBackColor = true;
-            btnClear.Click += btnCancel_Click;
+            btnNew.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnNew.Location = new Point(1050, 604);
+            btnNew.Name = "btnNew";
+            btnNew.Size = new Size(100, 80);
+            btnNew.TabIndex = 26;
+            btnNew.Text = "New";
+            btnNew.UseVisualStyleBackColor = true;
+            btnNew.Click += btnCancel_Click;
             // 
             // btnSortRank
             // 
@@ -309,7 +309,7 @@
             ClientSize = new Size(1204, 761);
             Controls.Add(label1);
             Controls.Add(btnSortRank);
-            Controls.Add(btnClear);
+            Controls.Add(btnNew);
             Controls.Add(btnDelete);
             Controls.Add(btnSave);
             Controls.Add(btnAdd);
@@ -335,7 +335,7 @@
             Controls.Add(dgvPlayers);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
-            Name = "PlayerForms";
+                                    Name = "PlayerForms";
             Text = "Manage players";
             ((System.ComponentModel.ISupportInitialize)dgvPlayers).EndInit();
             ResumeLayout(false);
@@ -370,7 +370,7 @@
         private Button btnAdd;
         private Button btnSave;
         private Button btnDelete;
-        private Button btnClear;
+        private Button btnNew;
         private Button btnSortRank;
         private Label label1;
     }

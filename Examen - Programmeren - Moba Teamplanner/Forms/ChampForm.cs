@@ -29,6 +29,20 @@ namespace Examen___Programmeren___Moba_Teamplanner.Forms
 
         private void LoadDDL()
         {
+            ddlFilterTypes.Items.Clear();
+            ddlFilterTypes.Items.Add("All Types");
+
+            foreach (ChampionType type in Enum.GetValues(typeof(ChampionType)))
+                ddlFilterTypes.Items.Add(type);
+            ddlFilterTypes.SelectedIndex = 0;
+
+            ddlDifficultyFilter.Items.Clear();
+            ddlDifficultyFilter.Items.Add("All Difficulties");
+
+            foreach (Difficulty difficulty in Enum.GetValues(typeof(Difficulty)))
+                ddlDifficultyFilter.Items.Add(difficulty);
+            ddlDifficultyFilter.SelectedIndex = 0;
+
             ddlFilterRoles.Items.Clear();
             ddlFilterRoles.Items.Add("All Roles");
 
@@ -56,6 +70,12 @@ namespace Examen___Programmeren___Moba_Teamplanner.Forms
             if (ddlFilterRoles.SelectedIndex > 0 && ddlFilterRoles.SelectedItem is Role selectedRole)
                 champs = champs.Where(c => c.MainRole == selectedRole).ToList();
 
+            if (ddlFilterTypes.SelectedIndex > 0 && ddlFilterTypes.SelectedItem is ChampionType selectedType)
+                champs = champs.Where(c => c.Type.HasFlag(selectedType)).ToList();
+
+            if (ddlDifficultyFilter.SelectedIndex > 0 && ddlDifficultyFilter.SelectedItem is Difficulty selectedDifficulty)
+                champs = champs.Where(c => c.Difficulty == selectedDifficulty).ToList();
+
             if (chkIsFavorite.Checked)
                 champs = champs.Where(c => c.IsFavorite).ToList();
 
@@ -82,6 +102,21 @@ namespace Examen___Programmeren___Moba_Teamplanner.Forms
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            LoadChamps();
+        }
+
+        private void ddlFilterTypes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadChamps();
+        }
+
+        private void ddlDifficultyFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadChamps();
+        }
+
+        private void ddlFilterRoles_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadChamps();
         }

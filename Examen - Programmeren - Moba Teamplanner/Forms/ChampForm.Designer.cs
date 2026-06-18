@@ -1,4 +1,4 @@
-﻿namespace Examen___Programmeren___Moba_Teamplanner.Forms
+namespace Examen___Programmeren___Moba_Teamplanner.Forms
 {
     partial class ChampForm
     {
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnClear = new Button();
+            btnNew = new Button();
             btnDelete = new Button();
             btnSave = new Button();
             btnAdd = new Button();
@@ -55,21 +55,21 @@
             ((System.ComponentModel.ISupportInitialize)dgvChamps).BeginInit();
             SuspendLayout();
             // 
-            // btnClear
+            // btnNew
             // 
-            btnClear.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnClear.Location = new Point(1050, 620);
-            btnClear.Name = "btnClear";
-            btnClear.Size = new Size(100, 80);
-            btnClear.TabIndex = 50;
-            btnClear.Text = "Clear";
-            btnClear.UseVisualStyleBackColor = true;
-            btnClear.Click += btnClear_Click;
+            btnNew.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnNew.Location = new Point(1050, 604);
+            btnNew.Name = "btnNew";
+            btnNew.Size = new Size(100, 80);
+            btnNew.TabIndex = 50;
+            btnNew.Text = "New";
+            btnNew.UseVisualStyleBackColor = true;
+            btnNew.Click += btnClear_Click;
             // 
             // btnDelete
             // 
             btnDelete.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnDelete.Location = new Point(1050, 495);
+            btnDelete.Location = new Point(1050, 487);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(100, 80);
             btnDelete.TabIndex = 49;
@@ -80,7 +80,7 @@
             // btnSave
             // 
             btnSave.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSave.Location = new Point(1050, 374);
+            btnSave.Location = new Point(1050, 360);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(100, 80);
             btnSave.TabIndex = 48;
@@ -91,7 +91,7 @@
             // btnAdd
             // 
             btnAdd.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAdd.Location = new Point(1049, 248);
+            btnAdd.Location = new Point(1050, 240);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(100, 80);
             btnAdd.TabIndex = 47;
@@ -102,7 +102,7 @@
             // lblIsFavorite
             // 
             lblIsFavorite.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblIsFavorite.Location = new Point(760, 640);
+            lblIsFavorite.Location = new Point(775, 546);
             lblIsFavorite.Name = "lblIsFavorite";
             lblIsFavorite.Size = new Size(121, 23);
             lblIsFavorite.TabIndex = 45;
@@ -111,7 +111,7 @@
             // lblDifficulty
             // 
             lblDifficulty.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDifficulty.Location = new Point(760, 379);
+            lblDifficulty.Location = new Point(775, 297);
             lblDifficulty.Name = "lblDifficulty";
             lblDifficulty.Size = new Size(121, 23);
             lblDifficulty.TabIndex = 43;
@@ -120,7 +120,7 @@
             // lblMainrole
             // 
             lblMainrole.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblMainrole.Location = new Point(760, 323);
+            lblMainrole.Location = new Point(775, 232);
             lblMainrole.Name = "lblMainrole";
             lblMainrole.Size = new Size(121, 23);
             lblMainrole.TabIndex = 42;
@@ -129,7 +129,7 @@
             // lblCharName
             // 
             lblCharName.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCharName.Location = new Point(760, 248);
+            lblCharName.Location = new Point(775, 172);
             lblCharName.Name = "lblCharName";
             lblCharName.Size = new Size(121, 23);
             lblCharName.TabIndex = 40;
@@ -138,7 +138,7 @@
             // chkIsFavorite
             // 
             chkIsFavorite.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            chkIsFavorite.Location = new Point(760, 666);
+            chkIsFavorite.Location = new Point(775, 575);
             chkIsFavorite.Name = "chkIsFavorite";
             chkIsFavorite.Size = new Size(147, 34);
             chkIsFavorite.TabIndex = 37;
@@ -149,7 +149,7 @@
             // 
             ddlDifficulty.DropDownStyle = ComboBoxStyle.DropDownList;
             ddlDifficulty.FormattingEnabled = true;
-            ddlDifficulty.Location = new Point(760, 405);
+            ddlDifficulty.Location = new Point(775, 327);
             ddlDifficulty.Name = "ddlDifficulty";
             ddlDifficulty.Size = new Size(147, 23);
             ddlDifficulty.TabIndex = 36;
@@ -158,14 +158,14 @@
             // 
             ddlMainRole.DropDownStyle = ComboBoxStyle.DropDownList;
             ddlMainRole.FormattingEnabled = true;
-            ddlMainRole.Location = new Point(760, 349);
+            ddlMainRole.Location = new Point(775, 262);
             ddlMainRole.Name = "ddlMainRole";
             ddlMainRole.Size = new Size(147, 23);
             ddlMainRole.TabIndex = 35;
             // 
             // txtChampion
             // 
-            txtChampion.Location = new Point(760, 279);
+            txtChampion.Location = new Point(775, 202);
             txtChampion.Name = "txtChampion";
             txtChampion.Size = new Size(147, 23);
             txtChampion.TabIndex = 33;
@@ -196,6 +196,7 @@
             ddlFilterTypes.Name = "ddlFilterTypes";
             ddlFilterTypes.Size = new Size(121, 23);
             ddlFilterTypes.TabIndex = 29;
+            ddlFilterTypes.SelectedIndexChanged += ddlFilterTypes_SelectedIndexChanged;
             // 
             // txtSearch
             // 
@@ -209,12 +210,12 @@
             // 
             dgvChamps.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvChamps.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvChamps.Location = new Point(50, 100);
+            dgvChamps.Location = new Point(50, 115);
             dgvChamps.MultiSelect = false;
             dgvChamps.Name = "dgvChamps";
             dgvChamps.ReadOnly = true;
             dgvChamps.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvChamps.Size = new Size(641, 619);
+            dgvChamps.Size = new Size(650, 619);
             dgvChamps.TabIndex = 27;
             dgvChamps.SelectionChanged += dgvChamps_SelectionChanged;
             // 
@@ -235,11 +236,12 @@
             ddlDifficultyFilter.Name = "ddlDifficultyFilter";
             ddlDifficultyFilter.Size = new Size(121, 23);
             ddlDifficultyFilter.TabIndex = 51;
+            ddlDifficultyFilter.SelectedIndexChanged += ddlDifficultyFilter_SelectedIndexChanged;
             // 
             // lblType
             // 
             lblType.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblType.Location = new Point(760, 444);
+            lblType.Location = new Point(775, 357);
             lblType.Name = "lblType";
             lblType.Size = new Size(121, 23);
             lblType.TabIndex = 54;
@@ -248,7 +250,7 @@
             // clbTypes
             // 
             clbTypes.FormattingEnabled = true;
-            clbTypes.Location = new Point(760, 480);
+            clbTypes.Location = new Point(775, 387);
             clbTypes.Name = "clbTypes";
             clbTypes.Size = new Size(147, 148);
             clbTypes.TabIndex = 55;
@@ -270,13 +272,14 @@
             ddlFilterRoles.Name = "ddlFilterRoles";
             ddlFilterRoles.Size = new Size(121, 23);
             ddlFilterRoles.TabIndex = 56;
+            ddlFilterRoles.SelectedIndexChanged += ddlFilterRoles_SelectedIndexChanged;
             // 
             // label1
             // 
             label1.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(760, 40);
+            label1.Location = new Point(775, 25);
             label1.Name = "label1";
-            label1.Size = new Size(389, 169);
+            label1.Size = new Size(371, 134);
             label1.TabIndex = 58;
             label1.Text = "Champion Manager";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -293,7 +296,7 @@
             Controls.Add(lblType);
             Controls.Add(lblDifficultyFilter);
             Controls.Add(ddlDifficultyFilter);
-            Controls.Add(btnClear);
+            Controls.Add(btnNew);
             Controls.Add(btnDelete);
             Controls.Add(btnSave);
             Controls.Add(btnAdd);
@@ -310,8 +313,10 @@
             Controls.Add(ddlFilterTypes);
             Controls.Add(txtSearch);
             Controls.Add(dgvChamps);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
             Name = "ChampForm";
-            Text = "ChampForm";
+            Text = "Manage champions";
             ((System.ComponentModel.ISupportInitialize)dgvChamps).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -319,7 +324,7 @@
 
         #endregion
 
-        private Button btnClear;
+        private Button btnNew;
         private Button btnDelete;
         private Button btnSave;
         private Button btnAdd;
